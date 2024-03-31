@@ -28,6 +28,7 @@ const MainRoutes = () => {
 
                 '/utils/util-typography',
                 '/utils/util-color',
+          
                 '/utils/util-shadow',
                 '/icons/tabler-icons',
                 '/icons/material-icons',
@@ -43,6 +44,7 @@ const MainRoutes = () => {
                         <Route path="/utils/util-typography" component={UtilsTypography} />
                         <Route path="/utils/util-color" component={UtilsColor} />
                         <Route path="/utils/util-shadow" component={UtilsShadow} />
+                
                         <Route path="/icons/tabler-icons" component={UtilsTablerIcons} />
                         <Route path="/icons/material-icons" component={UtilsMaterialIcons} />
                     </AuthGuard>

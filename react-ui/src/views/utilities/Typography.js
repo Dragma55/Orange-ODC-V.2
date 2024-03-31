@@ -1,128 +1,211 @@
 import React from 'react';
-// material-ui
-import { Grid, Link } from '@material-ui/core';
-import MuiTypography from '@material-ui/core/Typography';
+import { useCallback, useState } from 'react';
+import {
+    Box,
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    Divider,
+    TextField,
+    Unstable_Grid2 as Grid
+  } from '@mui/material';
 
-// project imports
-import SubCard from './../../ui-component/cards/SubCard';
 import MainCard from './../../ui-component/cards/MainCard';
-import SecondaryAction from './../../ui-component/cards/CardSecondaryAction';
-import { gridSpacing } from './../../store/constant';
 
-//==============================|| TYPOGRAPHY ||==============================//
+
+const levels = [
+    {
+      value: '1',
+      label: 'Niveau débutant'
+    },
+    {
+      value: '2',
+      label: 'Niveau intermédiaire'
+    },
+    {
+      value: '3',
+      label: 'Niveau avancé'
+    },
+  ];
+  
+  const hours = [
+    {
+      value: '1',
+      label: '1'
+    },
+    {
+      value: '2',
+      label: '2'
+    },
+    {
+      value: '3',
+      label: '3'
+    },
+    {
+      value: '4',
+      label: '4'
+    },
+    {
+      value: '5',
+      label: '5'
+    },
+    {
+      value: '6',
+      label: '6'
+    },
+    {
+      value: '7',
+      label: '7'
+    },
+    {
+      value: '8',
+      label: '8'
+    },
+    {
+      value: '9',
+      label: '9'
+    },
+    {
+      value: '10',
+      label: '10'
+    },
+  ];
+  
 
 const Typography = () => {
+
+    const [values, setValues] = useState({
+        title: '',
+        desc: '',
+        total: ' ',
+        level: ' '
+      });
+    
+      const handleChange2 = (event) => {
+        const { name, value } = event.target;
+        setValues((prevState) => ({
+          ...prevState,
+          [name]: value
+        }));
+      };
+
+      const handleSubmit = useCallback(
+        (event) => {
+          event.preventDefault();
+        },
+        []
+      ); 
+
     return (
-        <MainCard title="Basic Typography" secondary={<SecondaryAction link="https://next.material-ui.com/system/typography/" />}>
-            <Grid container spacing={gridSpacing}>
-                <Grid item xs={12} sm={6}>
-                    <SubCard title="Heading">
-                        <Grid container direction="column" spacing={1}>
-                            <Grid item>
-                                <MuiTypography variant="h1" gutterBottom>
-                                    h1. Heading
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="h2" gutterBottom>
-                                    h2. Heading
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="h3" gutterBottom>
-                                    h3. Heading
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="h4" gutterBottom>
-                                    h4. Heading
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="h5" gutterBottom>
-                                    h5. Heading
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="h6" gutterBottom>
-                                    h6. Heading
-                                </MuiTypography>
-                            </Grid>
-                        </Grid>
-                    </SubCard>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <SubCard title="Sub title">
-                        <Grid container direction="column" spacing={1}>
-                            <Grid item>
-                                <MuiTypography variant="subtitle1" gutterBottom>
-                                    subtitle1. Lorem ipsum dolor sit connecter adieu siccing eliot. Quos blanditiis tenetur
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="subtitle2" gutterBottom>
-                                    subtitle2. Lorem ipsum dolor sit connecter adieu siccing eliot. Quos blanditiis tenetur
-                                </MuiTypography>
-                            </Grid>
-                        </Grid>
-                    </SubCard>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <SubCard title="Body">
-                        <Grid container direction="column" spacing={1}>
-                            <Grid item>
-                                <MuiTypography variant="body1" gutterBottom>
-                                    body1. Lorem ipsum dolor sit connecter adieu siccing eliot. Quos blanditiis tenetur unde suscipit, quam
-                                    beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat
-                                    deleniti? Eum quasi quidem quibusdam.
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="body2" gutterBottom>
-                                    body2. Lorem ipsum dolor sit connecter adieu siccing eliot. Quos blanditiis tenetur unde suscipit, quam
-                                    beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat
-                                    deleniti? Eum quasi quidem quibusdam.
-                                </MuiTypography>
-                            </Grid>
-                        </Grid>
-                    </SubCard>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <SubCard title="Extra">
-                        <Grid container direction="column" spacing={1}>
-                            <Grid item>
-                                <MuiTypography variant="button" display="block" gutterBottom>
-                                    button text
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="caption" display="block" gutterBottom>
-                                    caption text
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography variant="overline" display="block" gutterBottom>
-                                    overline text
-                                </MuiTypography>
-                            </Grid>
-                            <Grid item>
-                                <MuiTypography
-                                    variant="body2"
-                                    color="primary"
-                                    component={Link}
-                                    href="https://berrydashboard.io"
-                                    target="_blank"
-                                    display="block"
-                                    gutterBottom
-                                    underline="hover"
-                                >
-                                    https://berrydashboard.io
-                                </MuiTypography>
-                            </Grid>
-                        </Grid>
-                    </SubCard>
-                </Grid>
-            </Grid>
+        <MainCard title="Créer une formation">
+                <form
+      autoComplete="off"
+      noValidate
+      onSubmit={handleSubmit}
+    >
+      <Card>
+        <CardContent sx={{ pt: 0 }}>
+          <Box sx={{ m: -1.5 }}>
+            <Grid
+              container
+              spacing={3}
+            >
+              <Grid
+                xs={12}
+                md={6}
+              >
+                <TextField
+                  fullWidth
+                  helperText="Spécifier le titre de la formation"
+                  label="Titre de la formation"
+                  name="title"
+                  onChange={handleChange2}
+                  required
+                  value={values.title}
+                />
+              </Grid>
+
+              <Grid
+                xs={12}
+                md={6}
+              >
+                <TextField
+                  fullWidth
+                  multiline
+                  rows={1} 
+                  helperText="Écriver une brève description de la formation"
+                  label="Description de la formation"
+                  name="desc"
+                  onChange={handleChange2}
+                  required
+                  value={values.desc}
+                />
+              </Grid>
+
+              <Grid
+                xs={12}
+                md={6}
+               >
+                <TextField
+                  fullWidth
+                  helperText="Définisser le nombre total d'heures des sessions de formation"
+                  label="Heures totales"
+                  name="total"
+                  onChange={handleChange2}
+                  required
+                  select
+                  SelectProps={{ native: true }}
+                  value={values.total}
+                >
+                  {hours.map((option) => (
+                    <option
+                      key={option.value}
+                      value={option.value}
+                    >
+                      {option.label}
+                    </option>
+                  ))}
+                </TextField>
+              </Grid>
+
+              <Grid
+                xs={12}
+                md={6}
+               >
+                <TextField
+                  fullWidth
+                  helperText="Attribuer un niveau à la formation"
+                  label="Niveau"
+                  name="level"
+                  onChange={handleChange2}
+                  required
+                  select
+                  SelectProps={{ native: true }}
+                  value={values.level}
+                >
+                  {levels.map((option) => (
+                    <option
+                      key={option.value}
+                      value={option.value}
+                    >
+                      {option.label}
+                    </option>
+                  ))}
+                </TextField>
+              </Grid>
+
+          </Grid>
+          </Box>  
+        </CardContent>
+        <Divider />
+        <CardActions sx={{ justifyContent: 'flex-end' }}>
+          <Button variant="contained">
+           Créer une formation
+          </Button>
+        </CardActions>
+      </Card>
+    </form>
         </MainCard>
     );
 };

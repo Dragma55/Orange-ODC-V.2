@@ -1,13 +1,13 @@
 // assets
-import { IconFile, IconCertificate, IconCalendar, IconSquarePlus, IconBoxMultiple, IconMail} from '@tabler/icons';
+import { IconFile, IconCertificate, IconCalendarPlus, IconPlus, IconBoxMultiple, IconMail} from '@tabler/icons';
 
 // constant
 const icons = {
-    IconCalendar: IconCalendar,
+    IconCalendarPlus: IconCalendarPlus,
     IconMail: IconMail,
     IconFile: IconFile,
     IconBoxMultiple: IconBoxMultiple,
-    IconSquarePlus: IconSquarePlus,
+    IconPlus: IconPlus,
     IconCertificate: IconCertificate
 };
 
@@ -22,23 +22,15 @@ export const utilities = {
             title: 'Create Training',
             type: 'item',
             url: '/utils/util-typography',
-            icon: icons['IconSquarePlus'],
+            icon: icons['IconPlus'],
             breadcrumbs: false
         },
         {
             id: 'Manage Sessions',
-            title: 'Create Session',
+            title: 'Manage Sessions',
             type: 'item',
             url: '/utils/util-color',
-            icon: icons['IconSquarePlus'],
-            breadcrumbs: false
-        },
-        {
-            id: 'Calendar',
-            title: 'Calendar',
-            type: 'item',
-            url: '/utils/util-shadow',
-            icon: icons['IconCalendar'],
+            icon: icons['IconCalendarPlus'],
             breadcrumbs: false
         },
         {
