@@ -1,0 +1,99 @@
+// paper & background
+$paper: #ffffff;
+
+// primary
+$primaryLight: #ffffff;
+$primaryMain: #f16e00;
+$primaryDark: #f16e00;
+$primary200: #f16e00;
+$primary800: #f16e00;
+
+// secondary
+$secondaryLight: #ffffff;
+$secondaryMain: #000;
+$secondaryDark: #000;
+$secondary200: #000;
+$secondary800: #000;
+
+// success Colors
+$successLight: #32c832;
+$success200: #32c832;
+$successMain: #32c832;
+$successDark: #32c832;
+
+// error
+$errorLight: #cd3c14;
+$errorMain: #cd3c14;
+$errorDark: #cd3c14;
+
+// orange
+$orangeLight: #f16e00;
+$orangeMain: #f16e00;
+$orangeDark: #f16e00;
+
+// warning
+$warningLight: #fc0;
+$warningMain: #fc0;
+$warningDark: #fc0;
+
+// grey
+$grey50: #fafafa;
+$grey100: #f5f5f5;
+$grey200: #eeeeee;
+$grey300: #e0e0e0;
+$grey500: #9e9e9e;
+$grey600: #757575;
+$grey700: #616161;
+$grey900: #212121;
+
+//-----------------------|| JAVASCRIPT ||-----------------------//
+
+:export {
+    // paper & background
+    paper: $paper;
+
+    // primary
+    primaryLight: $primaryLight;
+    primary200: $primary200;
+    primaryMain: $primaryMain;
+    primaryDark: $primaryDark;
+    primary800: $primary800;
+
+    // secondary
+    secondaryLight: $secondaryLight;
+    secondary200: $secondary200;
+    secondaryMain: $secondaryMain;
+    secondaryDark: $secondaryDark;
+    secondary800: $secondary800;
+
+    // success
+    successLight: $successLight;
+    success200: $success200;
+    successMain: $successMain;
+    successDark: $successDark;
+
+    // error
+    errorLight: $errorLight;
+    errorMain: $errorMain;
+    errorDark: $errorDark;
+
+    // orange
+    orangeLight: $orangeLight;
+    orangeMain: $orangeMain;
+    orangeDark: $orangeDark;
+
+    // warning
+    warningLight: $warningLight;
+    warningMain: $warningMain;
+    warningDark: $warningDark;
+
+    // grey
+    grey50: $grey50;
+    grey100: $grey100;
+    grey200: $grey200;
+    grey300: $grey300;
+    grey500: $grey500;
+    grey600: $grey600;
+    grey700: $grey700;
+    grey900: $grey900;
+}
