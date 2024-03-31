@@ -30,7 +30,7 @@ $ cd react-ui
 ```bash
 $ npm install
 then 
-npm audit fix --force
+npm audit fix --force ken jew 100+ vulerabilities
 ```
 
 <br />
@@ -61,9 +61,7 @@ $ cd api-server-nodejs
 > **Step 2** - Install dependencies via NPM or yarn
 
 ```bash
-$ npm i
-// OR
-$ yarn
+$ npm install --force
 ```
 
 <br />
@@ -129,13 +127,13 @@ Database migration
 > Generate migration:
 
 ```bash
-$ yarn typeorm migration:generate -n your_migration_name
+$ npm run typeorm migration:generate -n your_migration_name
 ```
 
 > run migration: 
 
 ```bash
-$ yarn typeorm migration:run
+$ npm run typeorm migration:run
 ```
 
 <br />
