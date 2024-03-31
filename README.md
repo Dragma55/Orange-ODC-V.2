@@ -30,7 +30,7 @@ $ cd react-ui
 ```bash
 $ npm install
 then 
-npm audit fix --force
+npm audit fix --force ken jew 100+ vulerabilities
 ```
 
 <br />
