@@ -127,13 +127,13 @@ Database migration
 > Generate migration:
 
 ```bash
-$ yarn typeorm migration:generate -n your_migration_name
+$ npm run typeorm migration:generate -n your_migration_name
 ```
 
 > run migration: 
 
 ```bash
-$ yarn typeorm migration:run
+$ npm run typeorm migration:run
 ```
 
 <br />
