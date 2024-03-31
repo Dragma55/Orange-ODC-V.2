@@ -61,9 +61,7 @@ $ cd api-server-nodejs
 > **Step 2** - Install dependencies via NPM or yarn
 
 ```bash
-$ npm i
-// OR
-$ yarn
+$ npm install --force
 ```
 
 <br />
