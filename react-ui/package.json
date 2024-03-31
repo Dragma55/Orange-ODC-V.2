@@ -8,8 +8,13 @@
         "npm": "v14.0.0,v16.0.0"
     },
     "dependencies": {
+        "@bitnoi.se/react-scheduler": "^0.1.5",
         "@emotion/react": "^11.4.0",
         "@emotion/styled": "^11.3.0",
+        "@fullcalendar/daygrid": "^6.1.11",
+        "@fullcalendar/interaction": "^6.1.11",
+        "@fullcalendar/react": "^6.1.11",
+        "@fullcalendar/timegrid": "^6.1.11",
         "@material-ui/core": "^5.0.0-beta.0",
         "@material-ui/data-grid": "^4.0.0-alpha.33",
         "@material-ui/icons": "^5.0.0-beta.0",
@@ -20,6 +25,7 @@
         "@mui/material": "^5.15.14",
         "@mui/x-date-pickers": "^7.1.0",
         "@mui/x-date-pickers-pro": "^7.1.0",
+        "@syncfusion/ej2-react-schedule": "^25.1.37",
         "@tabler/icons": "^1.39.1",
         "@testing-library/jest-dom": "^5.11.10",
         "@testing-library/react": "^11.2.6",
