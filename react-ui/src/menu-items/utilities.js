@@ -1,5 +1,5 @@
 // assets
-import { IconFile, IconCertificate, IconCalendarPlus, IconPlus, IconBoxMultiple, IconMail} from '@tabler/icons';
+import { IconFile, IconCertificate, IconCalendarPlus, IconMenu2, IconBoxMultiple, IconMail} from '@tabler/icons';
 
 // constant
 const icons = {
@@ -7,7 +7,7 @@ const icons = {
     IconMail: IconMail,
     IconFile: IconFile,
     IconBoxMultiple: IconBoxMultiple,
-    IconPlus: IconPlus,
+    IconMenu2: IconMenu2,
     IconCertificate: IconCertificate
 };
 
@@ -19,10 +19,10 @@ export const utilities = {
     children: [
         {
             id: 'Manage Trainings',
-            title: 'Create Training',
+            title: 'Manage Trainings',
             type: 'item',
             url: '/utils/util-typography',
-            icon: icons['IconPlus'],
+            icon: icons['IconMenu2'],
             breadcrumbs: false
         },
         {

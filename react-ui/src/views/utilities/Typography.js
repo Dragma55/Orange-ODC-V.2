@@ -12,7 +12,18 @@ import {
   } from '@mui/material';
 
 import MainCard from './../../ui-component/cards/MainCard';
+import MUIDataTable from "mui-datatables";
 
+const trainingcolumns = ["Nom de la formation", "Heures totales", "Niveau de formation"];
+const data = [
+  ["Python", "4 heures", "Intermédiaire"], 
+  ["CSS", "2 heures", "Débutant"],
+  ["Angular", "5 heures", "Avancé"],
+  ["JavaScript", "6 heures", "Avancé"],
+  ["React", "5 heures", "Intermédiaire"],
+  ["HTML", "2 heures", "Débutant"],
+  ["Node.js", "4 heures", "Intermédiaire"],
+];
 
 const levels = [
     {
@@ -74,6 +85,10 @@ const levels = [
   
 
 const Typography = () => {
+
+    const options = {
+      filterType: 'checkbox',
+    };
 
     const [values, setValues] = useState({
         title: '',
@@ -206,6 +221,12 @@ const Typography = () => {
         </CardActions>
       </Card>
     </form>
+    <MUIDataTable
+                title={"Liste des formations"}
+                data={data}
+                columns={trainingcolumns}
+                options={options}
+              />
         </MainCard>
     );
 };
