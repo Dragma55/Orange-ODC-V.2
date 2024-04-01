@@ -12,10 +12,6 @@ import Logo from './../../../../ui-component/Logo';
 import FirebaseRegister from './../firebase-forms/FirebaseRegister';
 import AuthFooter from './../../../../ui-component/cards/AuthFooter';
 
-// assets
-
-//===============================|| AUTH3 - REGISTER ||===============================//
-
 const Register = () => {
     const theme = useTheme();
     const matchDownSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -47,10 +43,10 @@ const Register = () => {
                                                         gutterBottom
                                                         variant={matchDownSM ? 'h3' : 'h2'}
                                                     >
-                                                        Sign up
+                                                        Sign up Expert
                                                     </Typography>
                                                     <Typography variant="caption" fontSize="16px" textAlign={matchDownSM ? 'center' : ''}>
-                                                        Enter your credentials to continue
+                                                        Enter credentials to continue
                                                     </Typography>
                                                 </Stack>
                                             </Grid>
@@ -59,21 +55,8 @@ const Register = () => {
                                     <Grid item xs={12}>
                                         <FirebaseRegister />
                                     </Grid>
-                                    <Grid item xs={12}>
-                                        <Divider />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <Grid item container direction="column" alignItems="center" xs={12}>
-                                            <Typography
-                                                component={RouterLink}
-                                                to="/pages/login/login3"
-                                                variant="subtitle1"
-                                                sx={{ textDecoration: 'none' }}
-                                            >
-                                                Have an account?
-                                            </Typography>
-                                        </Grid>
-                                    </Grid>
+                         
+                            
                                 </Grid>
                             </AuthCardWrapper>
                         </Grid>

@@ -40,14 +40,6 @@ export const utilities = {
             icon: icons['IconBoxMultiple'],
             children: [
                 {
-                    id: 'Emails',
-                    title: 'Email',
-                    type: 'item',
-                    icon: icons['IconMail'],
-                    url: '/icons/tabler-icons',
-                    breadcrumbs: false
-                },
-                {
                     id: 'Certificates',
                     title: 'Certificates',
                     type: 'item',
@@ -55,6 +47,14 @@ export const utilities = {
                     icon: icons['IconCertificate'],
                     breadcrumbs: false
                 },
+                {
+                    id: 'Emails',
+                    title: 'Email',
+                    type: 'item',
+                    icon: icons['IconMail'],
+                    url: '/icons/tabler-icons',
+                    breadcrumbs: false
+                }, 
                 {
                     id: 'Forms',
                     title: 'Forms',

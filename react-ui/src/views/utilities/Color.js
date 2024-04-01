@@ -4,6 +4,7 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, ExcelExp
 import { useRef } from 'react';
 import { createElement } from '@syncfusion/ej2-base';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { DateTimePicker } from '@syncfusion/ej2-calendars';
 
 import "@syncfusion/ej2-base/styles/material.css";
 import "@syncfusion/ej2-buttons/styles/material.css";
@@ -65,6 +66,7 @@ const UIColor = () => {
     return (
         <MainCard>
            <ScheduleComponent ref={scheduleObj} actionBegin={onActionBegin} popupOpen={onPopupOpen}>
+
              <Inject services={[Day, Week, WorkWeek, Month, Agenda, ExcelExport]}/>
            </ScheduleComponent>           
         </MainCard>
